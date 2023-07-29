@@ -15,6 +15,7 @@
 		"./features/python": "latest",
 		"./features/go": "latest",
 		"./features/ssh": "latest",
+		"./features/github": "latest",
 		"./features/cleanup": "latest"
 	},
 	"overrideFeatureInstallOrder": [
@@ -26,6 +27,7 @@
 		"./features/python",
 		"./features/go",
 		"./features/ssh",
+		"./features/github",
 		"./features/cleanup"
 	],
 	"remoteUser": "codespace",
