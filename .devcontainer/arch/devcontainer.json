@@ -16,6 +16,7 @@
 		"./features/go": "latest",
 		"./features/ssh": "latest",
 		"./features/github": "latest",
+		"./features/docker": "latest",
 		"./features/cleanup": "latest"
 	},
 	"overrideFeatureInstallOrder": [
@@ -28,6 +29,7 @@
 		"./features/go",
 		"./features/ssh",
 		"./features/github",
+		"./features/docker",
 		"./features/cleanup"
 	],
 	"remoteUser": "codespace",

@@ -1,0 +1,18 @@
+{
+	"id": "docker",
+	"name": "docker in docker",
+	"description": "Installs and run docker daemon",
+	"version": "0.0.1",
+	"privileged": true,
+	"containerEnv": {
+		"DOCKER_BUILDKIT": "1"
+	},
+	"mounts": [
+		{
+			"source": "dind-var-lib-docker-${devcontainerId}",
+			"target": "/var/lib/docker",
+			"type": "volume"
+		}
+	],
+	"entrypoint": "/usr/local/lib/init-docker.sh"
+}
