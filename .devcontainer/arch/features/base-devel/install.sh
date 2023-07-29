@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-
+user_name=${user_name:-$_CONTAINER_USER}
 packages=(
 	gdb
 	strace
@@ -19,6 +19,7 @@ packages=(
 	typos
 	valgrind
 	nasm
+	ccache
 )
 
 ##################
@@ -30,5 +31,11 @@ install_packages() {
 	pacman -Syu --needed --ask 4 --noconfirm "${packages[@]}"
 }
 
-install_packages
+## Setup ccache
+init_ccache() {
+	su -s /usr/bin/bash -c 'mkdir -p ~/.config/ccache' "$user_name"
+	install -o "$user_name" -Dm644 ccache.conf "/home/$user_name/.config/ccache"
+}
 
+install_packages
+init_ccache
