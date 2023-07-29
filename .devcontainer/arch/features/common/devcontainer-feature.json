@@ -1,0 +1,30 @@
+{
+	"id": "common",
+	"name": "common setup",
+	"description": "Install and setup common packages, and setup non-root user.",
+	"version": "0.0.1",
+	"options": {
+		"username": {
+			"type": "string",
+			"default": "codespace"
+		},
+		"userUid": {
+			"type": "string",
+			"default": "1000"
+		},
+		"userGid": {
+			"type": "string",
+			"default": "1000"
+		},
+		"chsh": {
+			"type": "string",
+			"description": "default shell",
+			"default": "bash",
+			"proposals": [
+				"bash",
+				"fish",
+				"zsh"
+			]
+		}
+	}
+}

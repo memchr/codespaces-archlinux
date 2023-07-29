@@ -1,13 +1,12 @@
 {
 	"name": "ArchLinux development container",
 	"image": "ghcr.io/archlinux/archlinux:base-devel",
-	// "build": {
-	// 	"dockerfile": "./Dockerfile"
-	// },
 	"features": {
-		"./features/greetings": {
-			"message": "climate change!!!"
-		}
+		"./features/common": {
+			"username": "codespace",
+			"useruid": "1000",
+			"usergid": "1000",
+			"chsh": "zsh"
 	},
 	"customizations": {
 		"vscode": {
