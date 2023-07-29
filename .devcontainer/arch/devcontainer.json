@@ -1,0 +1,4 @@
+{
+	"image": "ghcr.io/archlinux/archlinux:base-devel",
+	"features": {}
+}
