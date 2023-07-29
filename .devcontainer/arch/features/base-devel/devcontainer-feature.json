@@ -1,0 +1,6 @@
+{
+	"id": "base-devel",
+	"name": "development tools",
+	"description": "Install and setup development tools.",
+	"version": "0.0.1"
+}

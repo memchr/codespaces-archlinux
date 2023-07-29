@@ -9,6 +9,13 @@
 			"chsh": "zsh"
 	},
 		"./features/git": "latest",
+		"./features/base-devel": "latest"
+	},
+	"overrideFeatureInstallOrder": [
+		"./features/common",
+		"./features/git",
+		"./features/base-devel"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": [
