@@ -34,7 +34,7 @@ install_packages() {
 ## Setup ccache
 init_ccache() {
 	su -s /usr/bin/bash -c 'mkdir -p ~/.config/ccache' "$user_name"
-	install -o "$user_name" -Dm644 ccache.conf "/home/$user_name/.config/ccache"
+	install -o "$user_name" -g "$user_name" -Dm644 ccache.conf "/home/$user_name/.config/ccache"
 }
 
 install_packages
