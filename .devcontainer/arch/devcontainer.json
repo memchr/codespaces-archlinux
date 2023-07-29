@@ -9,12 +9,14 @@
 			"chsh": "zsh"
 		},
 		"./features/git": "latest",
-		"./features/base-devel": "latest"
+		"./features/base-devel": "latest",
+		"./features/cleanup": "latest"
 	},
 	"overrideFeatureInstallOrder": [
 		"./features/common",
 		"./features/git",
-		"./features/base-devel"
+		"./features/base-devel",
+		"./features/cleanup"
 	],
 	"remoteUser": "codespace",
 	"containerUser": "codespace",
