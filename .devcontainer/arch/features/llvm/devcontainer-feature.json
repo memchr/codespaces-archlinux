@@ -1,0 +1,6 @@
+{
+	"id": "llvm",
+	"name": "llvm toolchain",
+	"description": "Install LLVM toolchain.",
+	"version": "0.0.1"
+}

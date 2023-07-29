@@ -10,12 +10,14 @@
 		},
 		"./features/git": "latest",
 		"./features/base-devel": "latest",
+		"./features/llvm": "latest",
 		"./features/cleanup": "latest"
 	},
 	"overrideFeatureInstallOrder": [
 		"./features/common",
 		"./features/git",
 		"./features/base-devel",
+		"./features/llvm",
 		"./features/cleanup"
 	],
 	"remoteUser": "codespace",
