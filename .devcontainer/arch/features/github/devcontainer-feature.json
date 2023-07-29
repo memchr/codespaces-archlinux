@@ -2,5 +2,5 @@
 	"id": "github",
 	"name": "GitHub",
 	"description": "Installs the GitHub CLI.",
-	"version": "0.0.1"
+	"version": "1.0.0"
 }

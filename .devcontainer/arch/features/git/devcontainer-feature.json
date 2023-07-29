@@ -2,5 +2,5 @@
 	"id": "git",
 	"name": "git",
 	"description": "Install git and related tools.",
-	"version": "0.0.1"
+	"version": "1.0.0"
 }

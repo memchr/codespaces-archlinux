@@ -2,7 +2,7 @@
 	"id": "common",
 	"name": "common setup",
 	"description": "Install and setup common packages, and setup non-root user.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"options": {
 		"username": {
 			"type": "string",

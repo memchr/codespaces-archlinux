@@ -2,6 +2,6 @@
 	"id": "ssh",
 	"name": "setup ssh server",
 	"description": "Install ssh and setup sshd server.",
-	"version": "0.0.5",
+	"version": "1.0.0",
 	"entrypoint": "/usr/local/lib/init-sshd.sh"
 }

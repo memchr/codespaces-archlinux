@@ -2,7 +2,7 @@
 	"id": "docker",
 	"name": "docker in docker",
 	"description": "Installs and run docker daemon",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"privileged": true,
 	"containerEnv": {
 		"DOCKER_BUILDKIT": "1"
