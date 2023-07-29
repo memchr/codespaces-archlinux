@@ -1,4 +1,21 @@
 {
+	"name": "ArchLinux development container",
 	"image": "ghcr.io/archlinux/archlinux:base-devel",
-	"features": {}
+	// "build": {
+	// 	"dockerfile": "./Dockerfile"
+	// },
+	"features": {
+		"./features/greetings": {
+			"message": "climate change!!!"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.codespaces",
+				"GitHub.vscode-pull-request-github",
+				"github.vscode-github-actions"
+			]
+		}
+	}
 }

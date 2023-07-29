@@ -1,0 +1,13 @@
+{
+	"id": "greetings",
+	"name": "say hello",
+	"description": "say hello to this world!",
+	"version": "0.0.1",
+	"options": {
+		"message": {
+			"type": "string",
+			"description": "greeting message",
+			"default": "hello world!"
+		}
+	}
+}
