@@ -13,6 +13,7 @@
 		"./features/llvm": "latest",
 		"./features/cleanup": "latest",
 		"./features/node": "latest",
+		"./features/python": "latest"
 	},
 	"overrideFeatureInstallOrder": [
 		"./features/common",
@@ -20,6 +21,7 @@
 		"./features/base-devel",
 		"./features/llvm",
 		"./features/node",
+		"./features/python"
 	],
 	"remoteUser": "codespace",
 	"containerUser": "codespace",

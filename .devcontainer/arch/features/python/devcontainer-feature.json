@@ -1,0 +1,6 @@
+{
+	"id": "python",
+	"name": "setup python",
+	"description": "Install python and tools.",
+	"version": "0.0.1"
+}
