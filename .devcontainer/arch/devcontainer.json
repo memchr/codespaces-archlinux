@@ -8,6 +8,7 @@
 			"usergid": "1000",
 			"chsh": "zsh"
 	},
+		"./features/git": "latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
