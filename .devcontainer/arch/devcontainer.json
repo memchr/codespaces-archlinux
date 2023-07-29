@@ -7,7 +7,7 @@
 			"useruid": "1000",
 			"usergid": "1000",
 			"chsh": "zsh"
-	},
+		},
 		"./features/git": "latest",
 		"./features/base-devel": "latest"
 	},
@@ -16,6 +16,8 @@
 		"./features/git",
 		"./features/base-devel"
 	],
+	"remoteUser": "codespace",
+	"containerUser": "codespace",
 	"customizations": {
 		"vscode": {
 			"extensions": [
