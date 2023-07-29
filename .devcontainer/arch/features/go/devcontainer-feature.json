@@ -1,0 +1,12 @@
+{
+	"id": "go",
+	"name": "setup go",
+	"description": "Install go and tools.",
+	"version": "0.0.1",
+	"capAdd": [
+		"SYS_PTRACE"
+	],
+	"securityOpt": [
+		"seccomp=unconfined"
+	]
+}
