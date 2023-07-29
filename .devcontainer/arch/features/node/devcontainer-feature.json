@@ -1,0 +1,6 @@
+{
+	"id": "node",
+	"name": "setup nodejs",
+	"description": "Install nodejs, npm, pnpm.",
+	"version": "0.0.1"
+}
