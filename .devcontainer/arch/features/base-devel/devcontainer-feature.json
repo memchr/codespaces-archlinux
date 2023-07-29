@@ -2,5 +2,11 @@
 	"id": "base-devel",
 	"name": "development tools",
 	"description": "Install and setup development tools.",
-	"version": "0.1.0"
+	"version": "0.1.1",
+	"capAdd": [
+		"SYS_PTRACE"
+	],
+	"securityOpt": [
+		"seccomp=unconfined"
+	]
 }
