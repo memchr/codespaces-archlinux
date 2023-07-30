@@ -94,5 +94,22 @@ create_user() {
 	fi
 }
 
+init_system_profile() {
+	install -Dm644 '00-profile.sh' /etc/profile.d
+}
+
+#shellcheck disable=SC2016
+init_user_profile() {
+	# zsh
+	install -Dm644 -o "$user_name" -g "$user_name" zshenv "/home/$user_name/.zshenv"
+	install -Dm644 -o "$user_name" -g "$user_name" zshrc "/home/$user_name/.zshrc"
+	mkdir -p "/home/$user_name/.zshenv.d"
+	chown "$user_name:$user_name" "/home/$user_name/.zshenv.d"
+	# bash
+	install -Dm644 -o "$user_name" -g "$user_name" bashrc "/home/$user_name/.bashrc"
+}
+
 install_packages
 create_user
+init_system_profile
+init_user_profile

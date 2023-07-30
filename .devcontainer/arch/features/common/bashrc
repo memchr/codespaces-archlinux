@@ -1,0 +1,126 @@
+#!/usr/bin/bash
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
+DEBUGLEVEL="$BASHRC_DEBUG"
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# functions
+
+# print debug information
+
+DEBUG() {
+	[[ -z $DEBUGLEVEL ]] && return 0;
+	debuglevel="$1"
+	shift
+	[[ $DEBUGLEVEL -lt $debuglevel ]] && return 0;
+	_color="\033[3$((debuglevel + 1));1m"
+	echo -e "${_color}[debug $debuglevel]\033[0m $*" >&2
+}
+
+
+# check if command exists
+has() {
+	type -t "$1" &>/dev/null
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# shell options
+
+# extended glob
+shopt -s extglob
+
+# auto cd
+shopt -s autocd
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+shopt -s globstar
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# load profile
+#shellcheck disable=SC2154,SC1091
+(( ! _profile_loaded )) && source /etc/profile
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# environment variables
+
+# XDG base directories
+if [[ -z "$XDG_CONFIG_HOME" ]]; then
+	export XDG_CONFIG_HOME="$HOME/.config"
+	export XDG_CACHE_HOME="$HOME/.cache"
+	export XDG_DATA_HOME="$HOME/.local/share"
+	export XDG_STATE_HOME="$HOME/.local/state"
+	export XDG_RUNTIME_DIR="/run/user/$UID"
+fi
+
+# environment.d
+export PATH="$HOME/.local/bin:$PATH"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# history
+
+# don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+# append to the history file, don't overwrite it
+shopt -s histappend
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILE=${XDG_STATE_HOME}/bash_history
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# prompt
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+xterm-color | *-256color | *-kitty) color_prompt=yes ;;
+esac
+
+# color prompt
+if [[ "$color_prompt" = yes ]]; then
+	DEBUG 1 "color prompt enabled"
+	c1="\[\033[01;32m\]"
+	c2="\[\033[01;34m\]"
+	esc="\[\033[00m\]"
+fi
+# git prompt
+# shellcheck disable=SC2016,SC1091
+if [[ -f /usr/share/git/git-prompt.sh ]]; then
+	DEBUG 1 "git prompt enabled"
+	source /usr/share/git/git-prompt.sh
+	git_prompt='$(__git_ps1 " (%s)")'
+fi
+
+PS1="[${c1}\u@\h${esc} ${c2}\W${esc}${git_prompt}]\$ "
+
+unset color_prompt force_color_prompt \
+	c1 c2 esc git_prompt
+
+# eval "$(dircolors "$XDG_CONFIG_HOME"/dircolors)"
+
+# enable color support of ls and also add handy aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# aliases
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -lF'
+alias l='ls -al'
+if has exa; then
+	DEBUG 1 "alias \"l\" to exa"
+	alias l='exa -al'
+fi
+
+unset DEBUG DEBUGLEVEL BASHRC_DEBUG has 

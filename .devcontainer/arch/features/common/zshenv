@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+setopt nullglob
+
+path=($HOME/.local/bin $path)
+export PATH
+emulate sh -c 'source /etc/profile'
+
+[[ ! -d $HOME/.zshenv.d ]] && mkdir $HOME/.zshenv.d
+
+drop_ins=($HOME/.zshenv.d/*)
+
+if (( $#drop_ins > 0 )) {
+	source $HOME/.zshenv.d/*
+}
+
+unset drop_ins
