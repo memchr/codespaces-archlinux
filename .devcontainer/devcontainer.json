@@ -14,6 +14,7 @@
 		"ghcr.io/memchr/codespaces-archlinux/docker:latest": {},
 		"ghcr.io/memchr/codespaces-archlinux/aur:latest": {},
 		"ghcr.io/memchr/codespaces-archlinux/zsh:latest": {},
+		"ghcr.io/memchr/codespaces-archlinux/onedark:latest": {},
 		"ghcr.io/memchr/codespaces-archlinux/cleanup:latest": {}
 	},
 	"overrideFeatureInstallOrder": [
@@ -29,6 +30,7 @@
 		"ghcr.io/memchr/codespaces-archlinux/docker:latest",
 		"ghcr.io/memchr/codespaces-archlinux/aur:latest",
 		"ghcr.io/memchr/codespaces-archlinux/zsh:latest",
+		"ghcr.io/memchr/codespaces-archlinux/onedark:latest",
 		"ghcr.io/memchr/codespaces-archlinux/cleanup:latest"
 	],
 	"remoteUser": "codespace",

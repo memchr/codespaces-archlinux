@@ -1,0 +1,36 @@
+{
+	"id": "onedark",
+	"name": "onedark theme",
+	"description": "Install and setup onedark theme for vscode.",
+	"version": "0.0.1",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"PKief.material-icon-theme",
+				"zhuangtongfa.Material-theme"
+			],
+			"settings": {
+				// font
+				"editor.fontFamily": "'Cascadia Code', monospace",
+				"editor.fontLigatures": true,
+				"editor.fontWeight": "300",
+				// intellisense
+				"editor.tabCompletion": "on",
+				"editor.suggest.localityBonus": true,
+				// highlighting
+				"editor.semanticHighlighting.enabled": true,
+				// theme
+				"workbench.colorCustomizations": {
+					"[One Dark Pro Darker]": {
+						"statusBar.debuggingBackground": "#aa843d",
+						"statusBar.debuggingBorder": "#a58b3600",
+						"activityBar.background": "#1a1c22",
+						"menu.border": "#343A45",
+						"panelTitle.activeBorder": "#4D78CC"
+					}
+				},
+				"workbench.colorTheme": "One Dark Pro Darker"
+			}
+		}
+	}
+}
