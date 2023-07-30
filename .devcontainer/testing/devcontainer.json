@@ -1,0 +1,45 @@
+{
+	"name": "ArchLinux development container",
+	"image": "ghcr.io/archlinux/archlinux:base-devel",
+	"features": {
+		"./features/common": {},
+		"./features/git": {},
+		"./features/base-devel": {},
+		"./features/llvm": {},
+		"./features/node": {},
+		"./features/python": {},
+		"./features/go": {},
+		"./features/ssh": {},
+		"./features/github": {},
+		"./features/docker": {},
+		"./features/aur": {},
+		"./features/zsh": {},
+		"./features/cleanup": {}
+	},
+	"overrideFeatureInstallOrder": [
+		"./features/common",
+		"./features/git",
+		"./features/base-devel",
+		"./features/llvm",
+		"./features/node",
+		"./features/python",
+		"./features/go",
+		"./features/ssh",
+		"./features/github",
+		"./features/docker",
+		"./features/aur",
+		"./features/zsh",
+		"./features/cleanup"
+	],
+	"remoteUser": "codespace",
+	"containerUser": "codespace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.codespaces",
+				"GitHub.vscode-pull-request-github",
+				"github.vscode-github-actions"
+			]
+		}
+	}
+}
