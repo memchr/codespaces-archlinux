@@ -2,5 +2,5 @@
 	"id": "aur",
 	"name": "setup aur helper",
 	"description": "Install paru.",
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
