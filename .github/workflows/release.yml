@@ -22,4 +22,6 @@ jobs:
           publish-features: "true"
           base-path-to-features: "./src"
           generate-docs: "false"
-          
+        
+        env:
+          GITHUB_TOKEN: secrets.PAT
