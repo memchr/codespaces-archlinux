@@ -2,7 +2,9 @@ name: "Release dev container features"
 on:
   push:
     paths:
-      - 'src/*'
+      - 'src/**'
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
