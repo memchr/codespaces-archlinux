@@ -1,0 +1,6 @@
+{
+	"id": "devcontainer",
+	"name": "setup devcontainer testing tools",
+	"description": "Install devcontainer/cli.",
+	"version": "0.0.1"
+}
