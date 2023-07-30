@@ -2,5 +2,13 @@
 	"id": "node",
 	"name": "setup nodejs",
 	"description": "Install nodejs, npm, pnpm.",
-	"version": "1.0.0"
+	"version": "1.1.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"VisualStudioExptTeam.vscodeintellicode"
+			]
+		}
+	}
 }

@@ -36,14 +36,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"GitHub.codespaces",
-				"GitHub.vscode-pull-request-github",
-				"github.vscode-github-actions",
-				"timonwong.shellcheck",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"PKief.material-icon-theme",
-				"zhuangtongfa.Material-theme"
+				"timonwong.shellcheck"
 			]
 		}
 	}

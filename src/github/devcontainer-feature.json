@@ -2,5 +2,14 @@
 	"id": "github",
 	"name": "GitHub",
 	"description": "Installs the GitHub CLI.",
-	"version": "1.0.0"
+	"version": "1.1.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.codespaces",
+				"GitHub.vscode-pull-request-github",
+				"github.vscode-github-actions"
+			]
+		}
+	}
 }

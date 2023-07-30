@@ -2,11 +2,18 @@
 	"id": "go",
 	"name": "setup go",
 	"description": "Install go and tools.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"capAdd": [
 		"SYS_PTRACE"
 	],
 	"securityOpt": [
 		"seccomp=unconfined"
-	]
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	}
 }

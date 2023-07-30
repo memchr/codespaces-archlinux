@@ -2,5 +2,16 @@
 	"id": "python",
 	"name": "setup python",
 	"description": "Install python and tools.",
-	"version": "1.0.0"
+	"version": "1.1.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ms-toolsai.jupyter",
+				"ms-python.isort"
+			]
+		}
+	}
 }

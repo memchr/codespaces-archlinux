@@ -2,5 +2,12 @@
 	"id": "llvm",
 	"name": "llvm toolchain",
 	"description": "Install LLVM toolchain.",
-	"version": "1.0.0"
+	"version": "1.1.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vadimcn.vscode-lldb"
+			]
+		}
+	}
 }
