@@ -3,6 +3,10 @@ compinit
 
 setopt prompt_subst
 _prompt() {
-    print "[%B%F{green}%n %B%F{yellow}$GITHUB_REPOSITORY %B%F{blue}%1~%f%b] %?\n%B%F{white}%%%f%b "
+    print -n "[%B%F{green}%n "
+    if [[ -n $GITHUB_REPOSITORY ]] {
+        print -n "%B%F{yellow}$GITHUB_REPOSITORY "
+    }
+    print "%B%F{blue}%1~%f%b] %?\n%B%F{white}%%%f%b "
 }
 PROMPT='$(_prompt)'
