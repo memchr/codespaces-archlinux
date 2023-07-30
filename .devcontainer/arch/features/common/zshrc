@@ -1,2 +1,6 @@
 autoload -Uz compinit
 compinit
+
+setopt prompt_subst
+autoload -U colors && colors
+PROMPT="[$fg_bold[green]%n $fg_bold[yellow]\$GITHUB_REPOSITORY $fg_bold[blue]%-1~$reset_color] %?"$'\n'"$fg_bold[white]%%$reset_color "
