@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-user_name=${user_name:-$_CONTAINER_USER}
+user_name="${user_name:-$_CONTAINER_USER}"
 packages=(
 	nodejs
 	npm
