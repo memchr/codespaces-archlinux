@@ -11,7 +11,7 @@ Implements most basic features of the [universal devcontainer](https://github.co
 - [x] sshd
 - [x] github cli
 - [x] dind (docker in docker)
-- [ ] ccache
+- [x] ccache
 - [ ] sccache
 - [ ] rust
 - [ ] zsh theme
