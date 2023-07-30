@@ -2,7 +2,7 @@
 	"id": "base-devel",
 	"name": "development tools",
 	"description": "Install and setup development tools.",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"capAdd": [
 		"SYS_PTRACE"
 	],
