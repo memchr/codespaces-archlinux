@@ -17,6 +17,7 @@
 		"./features/ssh": "latest",
 		"./features/github": "latest",
 		"./features/docker": "latest",
+		"./features/aur": "latest",
 		"./features/cleanup": "latest"
 	},
 	"overrideFeatureInstallOrder": [
@@ -30,6 +31,7 @@
 		"./features/ssh",
 		"./features/github",
 		"./features/docker",
+		"./features/aur",
 		"./features/cleanup"
 	],
 	"remoteUser": "codespace",
