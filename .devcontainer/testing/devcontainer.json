@@ -34,14 +34,5 @@
 		"./features/cleanup"
 	],
 	"remoteUser": "codespace",
-	"containerUser": "codespace",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"GitHub.codespaces",
-				"GitHub.vscode-pull-request-github",
-				"github.vscode-github-actions"
-			]
-		}
-	}
+	"containerUser": "codespace"
 }
