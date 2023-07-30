@@ -10,16 +10,12 @@
 				"zhuangtongfa.Material-theme"
 			],
 			"settings": {
-				// font
 				"editor.fontFamily": "'Cascadia Code', monospace",
 				"editor.fontLigatures": true,
 				"editor.fontWeight": "300",
-				// intellisense
 				"editor.tabCompletion": "on",
 				"editor.suggest.localityBonus": true,
-				// highlighting
 				"editor.semanticHighlighting.enabled": true,
-				// theme
 				"workbench.colorCustomizations": {
 					"[One Dark Pro Darker]": {
 						"statusBar.debuggingBackground": "#aa843d",
