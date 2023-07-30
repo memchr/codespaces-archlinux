@@ -5,7 +5,6 @@ set -e
 user_name=${USERNAME}
 user_uid=${USERUID}
 user_gid=${USERGID}
-user_shell=${CHSH}
 
 packages=(
 	# networking
@@ -36,9 +35,7 @@ packages=(
 	rsync
 	time
 	# shell
-	zsh
 	grc
-	zsh-completions
 	bash-completion
 	# text editor
 	neovim
@@ -62,16 +59,8 @@ install_packages() {
 # 	user_name
 #	user_uid
 #	user_gid
-#	user_shell: default shell for user
 ##################
 create_user() {
-	# default shell
-	if [[ -e "/bin/${user_shell}" ]]; then
-		_shell="/bin/${user_shell}"
-	else
-		echo "shell $user_shell does not exist, revert to bash"
-		_shell="/bin/bash"
-	fi
 	# create user
 	local _group_name="${user_name}"
 	if id -u "${user_name}" &> /dev/null; then
@@ -86,11 +75,9 @@ create_user() {
 	else
 		# Create user
 		groupadd --gid "$user_gid" "$user_name"
-		useradd -s "$_shell" --uid "$user_uid" --gid "$user_name" -m "$user_name"
+		useradd --uid "$user_uid" --gid "$user_name" -m "$user_name"
 		# Add user to wheel group (sudo privilege)
 		usermod -aG wheel "$user_name"
-		# touch blank zshrc to suppress the setup message
-		su -s /bin/sh -c "touch ~/.zshrc" "$user_name" 
 	fi
 }
 
@@ -100,11 +87,6 @@ init_system_profile() {
 
 #shellcheck disable=SC2016
 init_user_profile() {
-	# zsh
-	install -Dm644 -o "$user_name" -g "$user_name" zshenv "/home/$user_name/.zshenv"
-	install -Dm644 -o "$user_name" -g "$user_name" zshrc "/home/$user_name/.zshrc"
-	mkdir -p "/home/$user_name/.zshenv.d"
-	chown "$user_name:$user_name" "/home/$user_name/.zshenv.d"
 	# bash
 	install -Dm644 -o "$user_name" -g "$user_name" bashrc "/home/$user_name/.bashrc"
 }

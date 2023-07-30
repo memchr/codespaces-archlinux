@@ -1,0 +1,13 @@
+{
+	"id": "zsh",
+	"name": "zsh setup",
+	"description": "Install and setup zsh",
+	"version": "0.0.1",
+	"options": {
+		"chsh": {
+			"type": "boolean",
+			"description": "change default shell to zsh",
+			"default": true
+		}
+	}
+}
