@@ -2,7 +2,7 @@
 	"id": "zsh",
 	"name": "zsh setup",
 	"description": "Install and setup zsh",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"options": {
 		"chsh": {
 			"type": "boolean",

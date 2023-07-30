@@ -2,5 +2,7 @@ autoload -Uz compinit
 compinit
 
 setopt prompt_subst
-autoload -U colors && colors
-PROMPT="[$fg_bold[green]%n $fg_bold[yellow]\$GITHUB_REPOSITORY $fg_bold[blue]%-1~$reset_color] %?"$'\n'"$fg_bold[white]%%$reset_color "
+_prompt() {
+    print "[%B%F{green}%n %B%F{yellow}$GITHUB_REPOSITORY %B%F{blue}%1~%f%b] %?\n%B%F{white}%%%f%b "
+}
+PROMPT='$(_prompt)'
