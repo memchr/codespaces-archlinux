@@ -10,7 +10,9 @@
 		"./features/python": {},
 		"./features/go": {},
 		"./features/ssh": {},
-		"./features/github": {},
+		"./features/github": {
+			"useAct": true
+		},
 		"./features/docker": {},
 		"./features/aur": {},
 		"./features/zsh": {},
