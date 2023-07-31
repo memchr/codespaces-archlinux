@@ -10,8 +10,8 @@ install_paru() {
 	git clone --depth 1 https://aur.archlinux.org/paru-bin.git
 	cd paru-bin
 	makepkg -si --noconfirm
-	popd
 	rm -rf paru-bin
+	popd
 }
 
 if [[ $(id -u) == 0 ]]; then
