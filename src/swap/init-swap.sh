@@ -7,7 +7,7 @@ if [[ $(id -u) != 0 ]]; then
 fi
 
 cat > /tmp/mkswap.sh << 'EOF'
-dd if=/dev/zero bs=1M of=/tmp/swapfile count=2K
+dd if=/dev/zero bs=1M of=/tmp/swapfile count=2K oflag=sync
 chmod 644 /tmp/swapfile
 mkswap /tmp/swapfile
 swapon /tmp/swapfile
