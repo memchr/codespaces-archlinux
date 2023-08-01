@@ -23,8 +23,7 @@ init_passwd() {
 
 init_sshd() {
 	ssh-keygen -A
-	cp init-sshd.sh /usr/local/lib
-	chmod +x /usr/local/lib/init-sshd.sh
+	install -Dm755 init-sshd.sh /usr/local/lib
 }
 
 install_packages
