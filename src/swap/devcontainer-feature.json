@@ -1,0 +1,7 @@
+{
+	"id": "swap",
+	"name": "setup swap",
+	"description": "Create swapfile on /tmp during startup.",
+	"version": "0.0.1",
+	"entrypoint": "/usr/local/lib/init-swap.sh"
+}

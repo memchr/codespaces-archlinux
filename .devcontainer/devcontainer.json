@@ -17,6 +17,7 @@
 		"ghcr.io/memchr/codespaces-archlinux/aur:latest": {},
 		"ghcr.io/memchr/codespaces-archlinux/zsh:latest": {},
 		"ghcr.io/memchr/codespaces-archlinux/onedark:latest": {},
+		"ghcr.io/memchr/codespace-archlinux/swap": {},
 		"./local-features/devcontainer": {},
 		"ghcr.io/memchr/codespaces-archlinux/cleanup:latest": {}
 	},
@@ -35,10 +36,12 @@
 		"ghcr.io/memchr/codespaces-archlinux/zsh:latest",
 		"ghcr.io/memchr/codespaces-archlinux/onedark:latest",
 		"./local-features/devcontainer",
+		"ghcr.io/memchr/codespace-archlinux/swap:latest",
 		"ghcr.io/memchr/codespaces-archlinux/cleanup:latest"
 	],
 	"remoteUser": "codespace",
 	"containerUser": "codespace",
+	"postStartCommand": "rm -rf /workspaces/.codespaces/shared/editors",
 	"customizations": {
 		"vscode": {
 			"extensions": [
