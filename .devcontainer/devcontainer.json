@@ -43,6 +43,13 @@
 	"containerUser": "codespace",
 	"postStartCommand": "rm -rf /workspaces/.codespaces/shared/editors",
 	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"memchr/linux-clang": {
+					"permissions": "write-all"
+				}
+			}
+		},
 		"vscode": {
 			"extensions": [
 				"timonwong.shellcheck"
